@@ -1,7 +1,7 @@
 class Gitnapped < Formula
   desc "Find out why you didn't sleep — commit history across repos"
   homepage "https://github.com/Solexma/gitnapped"
-  version ""
+  version "0.1.1"
   license "AGPL-3.0-or-later"
 
   if OS.mac? && Hardware::CPU.intel?
