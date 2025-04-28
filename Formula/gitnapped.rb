@@ -1,15 +1,31 @@
 class Gitnapped < Formula
   desc "Find out why you didn't sleep — commit history across repos"
   homepage "https://github.com/Solexma/gitnapped"
-  url "https://github.com/solexma/gitnapped/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "57d17cb4bdfc2761249aa4bad7b1de6ec38960299c4431ce8474344a30ed97bb"
+  version "0.1.1"
   license "AGPL-3.0-or-later"
-  version "v0.1.1"
 
-  depends_on "rust" => :build
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/solexma/gitnapped/releases/download/v0.1.1/gitnapped-x86_64-apple-darwin.tar.gz"
+    sha256 "57d17cb4bdfc2761249aa4bad7b1de6ec38960299c4431ce8474344a30ed97bb"
+  elsif OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/solexma/gitnapped/releases/download/v0.1.1/gitnapped-aarch64-apple-darwin.tar.gz"
+    sha256 "57d17cb4bdfc2761249aa4bad7b1de6ec38960299c4431ce8474344a30ed97bb"
+  elsif OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/solexma/gitnapped/releases/download/v0.1.1/gitnapped-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "57d17cb4bdfc2761249aa4bad7b1de6ec38960299c4431ce8474344a30ed97bb"
+  end
+
+  head do
+    url "https://github.com/solexma/gitnapped.git", branch: "main"
+    depends_on "rust" => :build
+  end
 
   def install
-    system "cargo", "install", *std_cargo_args
+    if build.head?
+      system "cargo", "install", *std_cargo_args
+    else
+      bin.install "gitnapped"
+    end
   end
 
   test do
