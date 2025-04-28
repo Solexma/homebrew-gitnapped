@@ -1,10 +1,10 @@
 class Gitnapped < Formula
   desc "Find out why you didn't sleep — commit history across repos"
   homepage "https://github.com/Solexma/gitnapped"
-  url "https://github.com/Solexma/gitnapped/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "e2ccf481e55a88c6344010e8b79f209fd70feaa22c3ee0e2c7396f995fab1d0f"
+  url "https://github.com/solexma/gitnapped/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "ef506c617d614e66c1d56d7a693b3b3f8c83326d1bd9bdd4f8416652250a569c"
   license "AGPL-3.0-or-later"
-  version "0.1.0"
+  version "v0.1.1"
 
   depends_on "rust" => :build
 
