@@ -1,18 +1,18 @@
 class Gitnapped < Formula
   desc "Find out why you didn't sleep — commit history across repos"
   homepage "https://github.com/Solexma/gitnapped"
-  version "0.1.1"
+  version ""
   license "AGPL-3.0-or-later"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/solexma/gitnapped/releases/download/v0.1.1/gitnapped-x86_64-apple-darwin.tar.gz"
-    sha256 "57d17cb4bdfc2761249aa4bad7b1de6ec38960299c4431ce8474344a30ed97bb"
+    url "https://github.com/solexma/gitnapped/releases/download//gitnapped-x86_64-apple-darwin.tar.gz"
+    sha256 ""
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/solexma/gitnapped/releases/download/v0.1.1/gitnapped-aarch64-apple-darwin.tar.gz"
-    sha256 "57d17cb4bdfc2761249aa4bad7b1de6ec38960299c4431ce8474344a30ed97bb"
+    url "https://github.com/solexma/gitnapped/releases/download//gitnapped-aarch64-apple-darwin.tar.gz"
+    sha256 ""
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/solexma/gitnapped/releases/download/v0.1.1/gitnapped-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "57d17cb4bdfc2761249aa4bad7b1de6ec38960299c4431ce8474344a30ed97bb"
+    url "https://github.com/solexma/gitnapped/releases/download//gitnapped-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 ""
   end
 
   head do
