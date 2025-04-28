@@ -4,6 +4,7 @@ class Gitnapped < Formula
   url "https://github.com/Solexma/gitnapped/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "e2ccf481e55a88c6344010e8b79f209fd70feaa22c3ee0e2c7396f995fab1d0f"
   license "AGPL-3.0-or-later"
+  version "0.1.0"
 
   depends_on "rust" => :build
 
