@@ -6,13 +6,13 @@ class Gitnapped < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/solexma/gitnapped/releases/download/v0.1.1/gitnapped-x86_64-apple-darwin.tar.gz"
-    sha256 "2ce1e201be650bcd25aec60c37890aec676c2bff29195b1af4abaf76fc615df0"
+    sha256 "fbaa6c0d973e79ec1e773b7996c0ba78ac1c3b9dd9933fc173cb4a2dc1f2483e"
   elsif OS.mac? && Hardware::CPU.arm?
     url "https://github.com/solexma/gitnapped/releases/download/v0.1.1/gitnapped-aarch64-apple-darwin.tar.gz"
-    sha256 "537456af3ea3bbc5c78b7d817538b0c6f97d812167118e2d3662bf98cf53a6fc"
+    sha256 "ec73bbbdb7153cafdc4ef3ddb58f832feee6e61f9d177a44de30acf16a6bacb9"
   elsif OS.linux? && Hardware::CPU.intel?
     url "https://github.com/solexma/gitnapped/releases/download/v0.1.1/gitnapped-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "e1f1689ed9d4d56ea7b60cc22a2610982251e605d4be3e5f81d7633e07dab449"
+    sha256 "dbe3733a5f6060a84deb3f7377ea9682871288632f50830101019b0eb280006a"
   end
 
   head do
